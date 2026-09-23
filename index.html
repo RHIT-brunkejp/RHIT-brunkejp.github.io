@@ -3,41 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Brunke | Portfolio</title>
+    <title>Joshua Brunke | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="portfolio.html">Portfolio</a>
-        </nav>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="site-name" href="index.html">Joshua Brunke</a>
+
+            <nav>
+                <a class="active" href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="portfolio.html">Portfolio</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h1>Joshua Brunke</h1>
 
-            <img src="images/profile.jpg" alt="Photo of Joshua Brunke">
+        <section class="hero">
+            <div class="hero-text">
+                <p class="small-heading">SOFTWARE ENGINEERING STUDENT</p>
 
-            <h2>Welcome to My Portfolio</h2>
+                <h1>Joshua Brunke</h1>
+
+                <p class="hero-description">
+                    Welcome to my personal portfolio. This website showcases
+                    my education, technical skills, work experience, and
+                    software development projects.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button" href="portfolio.html">
+                        View My Projects
+                    </a>
+
+                    <a class="button button-outline" href="resume.html">
+                        View My Resume
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Photo of Joshua Brunke">
+            </div>
+        </section>
+
+
+        <section class="intro-section">
+
+            <p class="small-heading">ABOUT ME</p>
+
+            <h2>Building Skills Through Technology</h2>
 
             <p>
-                Welcome to my portfolio website. This website showcases my
-                education, experience, technical skills, and projects.
+                I am a Software Engineering student at Rose-Hulman Institute
+                of Technology. My coursework has given me experience with
+                programming, systems programming, object-oriented software
+                development, web development, and computer architecture.
             </p>
+
+            <p>
+                I enjoy developing software, learning new technologies, and
+                working on projects that allow me to apply what I have learned.
+            </p>
+
         </section>
+
+
+        <section class="quick-links">
+
+            <div class="info-card">
+                <div class="card-icon">01</div>
+
+                <h2>Resume</h2>
+
+                <p>
+                    View my education, technical skills, relevant coursework,
+                    and professional experience.
+                </p>
+
+                <a href="resume.html">View Resume →</a>
+            </div>
+
+
+            <div class="info-card">
+                <div class="card-icon">02</div>
+
+                <h2>Portfolio</h2>
+
+                <p>
+                    Explore software and web development projects that
+                    demonstrate my programming experience.
+                </p>
+
+                <a href="portfolio.html">View Projects →</a>
+            </div>
+
+
+            <div class="info-card">
+                <div class="card-icon">03</div>
+
+                <h2>Education</h2>
+
+                <p>
+                    Currently pursuing a Bachelor of Science in Software
+                    Engineering at Rose-Hulman.
+                </p>
+
+                <a href="resume.html">Learn More →</a>
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Joshua Brunke</p>
-        <a href="www.linkedin.com/in/jjbrunke">LinkedIn</a>
-        <a href="https://github.com/RHIT-brunkejp">GitHub</a>
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div>
+                <h2>Joshua Brunke</h2>
+
+                <p>
+                    Software Engineering Student
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="portfolio.html">Portfolio</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Professional</h3>
+
+                <a href="https://www.linkedin.com/in/jjbrunke"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/RHIT-brunkejp"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Joshua Brunke. All rights reserved.</p>
+        </div>
+
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
