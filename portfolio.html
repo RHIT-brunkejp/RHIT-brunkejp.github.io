@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,15 @@
 
 <body>
 
-    <header class="site-header">
-        <div class="header-content">
+    <header>
+        <div class="top">
 
-            <a class="site-name" href="index.html">Joshua Brunke</a>
+            <h1>Joshua Brunke</h1>
 
             <nav>
                 <a href="index.html">Home</a>
                 <a href="resume.html">Resume</a>
-                <a class="active" href="portfolio.html">Portfolio</a>
+                <a class="current" href="portfolio.html">Portfolio</a>
             </nav>
 
         </div>
@@ -26,204 +27,146 @@
 
     <main>
 
-        <section class="page-banner">
+        <section class="page-title">
 
-            <p class="small-heading">SOFTWARE DEVELOPMENT</p>
+            <p class="small">MY WORK</p>
 
-            <h1>My Portfolio</h1>
+            <h2>Portfolio</h2>
 
             <p>
-                A collection of projects demonstrating my programming,
-                software development, and web development experience.
+                A collection of programming and web development projects.
             </p>
 
         </section>
 
 
-        <section class="projects-section">
+        <section class="section">
 
-            <div class="filter-area">
+            <h2>Projects</h2>
 
-                <h2>Projects</h2>
+            <div class="buttons">
 
-                <div class="filter-buttons">
+                <button class="filter current-filter"
+                        data-type="all">
+                    All
+                </button>
 
-                    <button class="filter-button active-filter"
-                            data-filter="all">
-                        All
-                    </button>
+                <button class="filter"
+                        data-type="java">
+                    Java
+                </button>
 
-                    <button class="filter-button"
-                            data-filter="java">
+                <button class="filter"
+                        data-type="web">
+                    Web
+                </button>
+
+                <button class="filter"
+                        data-type="other">
+                    Other
+                </button>
+
+            </div>
+
+
+            <div class="projects">
+
+
+                <article class="card project"
+                         data-type="java">
+
+                    <img src="images/bronco.jpg"
+                         alt="Screenshot of the Myth of the Forgotten Bronco project">
+
+                    <h3>Myth of the Forgotten Bronco</h3>
+
+                    <p>
+                        A Java text-based adventure game featuring
+                        branching stories and puzzle mechanics.
+                    </p>
+
+                    <p>
+                        <strong>Technologies:</strong>
                         Java
-                    </button>
+                    </p>
 
-                    <button class="filter-button"
-                            data-filter="web">
-                        Web
-                    </button>
-
-                    <button class="filter-button"
-                            data-filter="other">
-                        Other
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-grid">
-
-
-                <article class="project-card"
-                         data-category="java">
-
-                    <div class="project-image">
-                        <img src="images/bronco.jpg"
-                             alt="Screenshot representing the Myth of the Forgotten Bronco Java game">
-                    </div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">JAVA PROJECT</p>
-
-                        <h3>Myth of the Forgotten Bronco</h3>
-
-                        <p>
-                            A co-developed Java text-based adventure game
-                            featuring branching stories and puzzle mechanics.
-                        </p>
-
-                        <div class="technology-tags">
-                            <span>Java</span>
-                            <span>Game Development</span>
-                        </div>
-
-                        <p class="project-role">
-                            <strong>Role:</strong> Co-Developer
-                        </p>
-
-                    </div>
+                    <p>
+                        <strong>Role:</strong>
+                        Co-Developer
+                    </p>
 
                 </article>
 
 
-                <article class="project-card"
-                         data-category="web">
+                <article class="card project"
+                         data-type="web">
 
-                    <div class="project-image">
+                    <img src="images/portfolio.jpg"
+                         alt="Screenshot of my personal portfolio website">
 
-                        <img src="images/portfolio.jpg"
-                             alt="Screenshot of the personal portfolio website">
+                    <h3>Personal Portfolio Website</h3>
 
-                    </div>
+                    <p>
+                        A personal website created to showcase my
+                        education, skills, experience, and projects.
+                    </p>
 
-                    <div class="project-content">
+                    <p>
+                        <strong>Technologies:</strong>
+                        HTML, CSS, JavaScript, Git, GitHub,
+                        GitHub Pages, Visual Studio Code
+                    </p>
 
-                        <p class="project-type">WEB PROJECT</p>
-
-                        <h3>Personal Portfolio Website</h3>
-
-                        <p>
-                            A responsive personal portfolio website created
-                            to showcase my education, technical skills,
-                            experience, and software development projects.
-                        </p>
-
-                        <div class="technology-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>GitHub Pages</span>
-                        </div>
-
-                        <p class="project-role">
-                            <strong>Role:</strong> Developer
-                        </p>
-
-                        <a class="project-button" href="index.html">
-                            View Website
-                        </a>
-
-                    </div>
+                    <a href="index.html">
+                        View Website
+                    </a>
 
                 </article>
 
 
-                <article class="project-card"
-                         data-category="other">
+                <article class="card project"
+                         data-type="other">
 
-                    <div class="project-image project-placeholder">
-
-                        <span>PROJECT 03</span>
-
+                    <div class="project-image">
+                        Project Coming Soon
                     </div>
 
-                    <div class="project-content">
+                    <h3>Future Project</h3>
 
-                        <p class="project-type">OTHER PROJECT</p>
-
-                        <h3>Future Project</h3>
-
-                        <p>
-                            More software development projects will be added
-                            here as I continue developing my programming and
-                            engineering skills.
-                        </p>
-
-                        <div class="technology-tags">
-                            <span>Coming Soon</span>
-                        </div>
-
-                    </div>
+                    <p>
+                        Additional software engineering projects will
+                        be added here as they are completed.
+                    </p>
 
                 </article>
 
 
             </div>
-
-        </section>
-
-
-        <section class="project-note">
-
-            <p class="small-heading">MORE TO COME</p>
-
-            <h2>Continuing to Build</h2>
-
-            <p>
-                This portfolio will continue to grow as I complete additional
-                software engineering and web development projects throughout
-                my education.
-            </p>
 
         </section>
 
     </main>
 
 
-    <footer class="site-footer">
+    <footer>
 
-        <div class="footer-content">
+        <div class="footer">
 
             <div>
                 <h2>Joshua Brunke</h2>
                 <p>Software Engineering Student</p>
             </div>
 
-            <div class="footer-links">
-                <h3>Explore</h3>
+            <div>
+                <h3>Pages</h3>
 
                 <a href="index.html">Home</a>
                 <a href="resume.html">Resume</a>
                 <a href="portfolio.html">Portfolio</a>
             </div>
 
-            <div class="footer-links">
-                <h3>Professional</h3>
+            <div>
+                <h3>Links</h3>
 
                 <a href="https://www.linkedin.com/in/jjbrunke"
                    target="_blank"
@@ -231,7 +174,7 @@
                     LinkedIn
                 </a>
 
-                <a href="https://github.com/RHIT-brunkejp"
+                <a href="https://github.com/"
                    target="_blank"
                    rel="noopener noreferrer">
                     GitHub
@@ -240,11 +183,12 @@
 
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 Joshua Brunke. All rights reserved.</p>
-        </div>
+        <p class="bottom">
+            &copy; 2026 Joshua Brunke
+        </p>
 
     </footer>
+
 
     <script src="script.js"></script>
 

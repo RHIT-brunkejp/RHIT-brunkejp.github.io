@@ -2,31 +2,24 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f3f6fa;
-    color: #202b3c;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f8;
+    color: #222;
     line-height: 1.6;
 }
 
 
-/* =========================
-   HEADER
-   ========================= */
+/* Header */
 
-.site-header {
-    background-color: #12243d;
+header {
+    background-color: #17324d;
     color: white;
-    border-bottom: 4px solid #2f6da8;
 }
 
-.header-content {
-    max-width: 1150px;
+.top {
+    max-width: 1100px;
     margin: auto;
     padding: 20px;
     display: flex;
@@ -34,15 +27,9 @@ body {
     align-items: center;
 }
 
-.site-name {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.site-name:visited {
-    color: white;
+.top h1 {
+    margin: 0;
+    font-size: 25px;
 }
 
 nav {
@@ -53,103 +40,90 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 nav a:visited {
-    color: #dcecff;
+    color: #d9e8f5;
 }
 
-nav a:hover {
-    background-color: #244b73;
-}
-
-nav a.active {
-    background-color: #2f6da8;
+nav a:hover,
+nav .current {
+    background-color: #2e6595;
 }
 
 
-/* =========================
-   MAIN
-   ========================= */
+/* Main */
 
 main {
-    max-width: 1150px;
+    max-width: 1100px;
     margin: auto;
-    min-height: 600px;
 }
 
 
-/* =========================
-   HOME HERO
-   ========================= */
+/* Home banner */
 
-.hero {
-    min-height: 500px;
-    background-color: #172f4d;
+.banner {
+    background-color: #244d72;
     color: white;
-    padding: 70px;
+    padding: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 40px;
 }
 
-.hero-text {
+.banner h2 {
+    font-size: 42px;
+    margin: 5px 0 15px 0;
+}
+
+.banner p {
     max-width: 650px;
 }
 
-.small-heading {
-    color: #4e91ce;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.hero .small-heading {
-    color: #8fc5f2;
-}
-
-.hero h1 {
-    font-size: 58px;
-    margin: 0 0 20px 0;
-    line-height: 1.1;
-}
-
-.hero-description {
-    font-size: 19px;
-    color: #dce8f5;
-    max-width: 600px;
-}
-
-.hero-image img {
-    width: 260px;
-    height: 260px;
+.banner img {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 8px solid white;
+    border: 5px solid white;
 }
 
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* Text */
 
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
+.small {
+    color: #3c79aa;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
 }
+
+.banner .small {
+    color: #a9d2ef;
+}
+
+h2 {
+    color: #17324d;
+}
+
+.banner h2,
+.page-title h2 {
+    color: white;
+}
+
+
+/* Buttons */
 
 .button {
     display: inline-block;
-    background-color: #2f6da8;
+    background-color: #3c79aa;
     color: white;
-    padding: 13px 22px;
-    border-radius: 6px;
+    padding: 10px 18px;
+    margin-top: 15px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -159,501 +133,170 @@ main {
 }
 
 .button:hover {
-    background-color: #3d82c2;
+    background-color: #5590bd;
 }
 
-.button-outline {
-    background-color: transparent;
-    border: 2px solid white;
-}
 
-.button-outline:hover {
+/* Sections */
+
+.section {
     background-color: white;
-    color: #172f4d;
-}
-
-
-/* =========================
-   GENERAL SECTIONS
-   ========================= */
-
-.intro-section {
-    background-color: white;
-    margin: 40px;
-    padding: 45px;
-    border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-}
-
-.intro-section h2 {
-    font-size: 32px;
-    margin-top: 5px;
-    color: #172f4d;
-}
-
-.intro-section p:not(.small-heading) {
-    max-width: 850px;
-}
-
-
-/* =========================
-   HOME CARDS
-   ========================= */
-
-.quick-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin: 40px;
-}
-
-.info-card {
-    background-color: white;
+    margin: 35px;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-    border-top: 5px solid #2f6da8;
-}
-
-.info-card:hover {
-    transform: translateY(-4px);
-}
-
-.card-icon {
-    color: #2f6da8;
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.info-card h2 {
-    color: #172f4d;
-}
-
-.info-card a,
-.project-content a {
-    color: #174f80;
-    font-weight: bold;
-}
-
-.info-card a:visited,
-.project-content a:visited {
-    color: #613d80;
-}
-
-
-/* =========================
-   PAGE BANNER
-   ========================= */
-
-.page-banner {
-    background-color: #172f4d;
-    color: white;
-    padding: 60px;
-}
-
-.page-banner h1 {
-    font-size: 48px;
-    margin: 5px 0 15px 0;
-}
-
-.page-banner p:not(.small-heading) {
-    color: #dce8f5;
-    max-width: 700px;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-
-/* =========================
-   RESUME
-   ========================= */
-
-.resume-section {
-    padding: 45px 40px 10px 40px;
-}
-
-.section-heading {
-    margin-bottom: 25px;
-}
-
-.section-heading h2 {
-    font-size: 32px;
-    color: #172f4d;
-    margin-top: 0;
-}
-
-.resume-card {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-left: 5px solid #2f6da8;
     border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
-.resume-card-heading {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.resume-card h3 {
-    color: #172f4d;
-    margin-top: 0;
-    margin-bottom: 3px;
-}
-
-.resume-card h4 {
-    color: #244b73;
-    margin-bottom: 8px;
-}
-
-.location,
-.date {
-    color: #65758a;
+.section h2 {
     margin-top: 0;
 }
 
-.skill-list {
+
+/* Cards */
+
+.cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 35px;
 }
 
-
-/* =========================
-   SKILLS
-   ========================= */
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.skill-card {
+.card {
     background-color: white;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 8px #d5dce3;
 }
 
-.skill-card h3 {
-    color: #172f4d;
-    margin-top: 0;
+.card h3 {
+    color: #244d72;
 }
 
-.skill-card ul {
-    padding-left: 20px;
-}
-
-
-/* =========================
-   EXPERIENCE
-   ========================= */
-
-.experience-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.experience-card {
-    display: flex;
-    gap: 25px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
-}
-
-.experience-number {
-    font-size: 25px;
+.card a {
+    color: #17517f;
     font-weight: bold;
-    color: #2f6da8;
-    min-width: 45px;
 }
 
-.experience-card h3 {
-    margin-top: 0;
-    color: #172f4d;
-}
-
-.company {
-    color: #2f6da8;
-    font-weight: bold;
-    margin: 0;
-}
-
-.experience-card ul {
-    padding-left: 20px;
+.card a:visited {
+    color: #633d7d;
 }
 
 
-/* =========================
-   PORTFOLIO
-   ========================= */
+/* Page title */
 
-.projects-section {
-    padding: 45px 40px;
+.page-title {
+    background-color: #244d72;
+    color: white;
+    padding: 45px;
 }
 
-.filter-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+.page-title h2 {
+    font-size: 40px;
+    margin: 5px 0;
 }
 
-.filter-area h2 {
-    color: #172f4d;
-    font-size: 32px;
+
+/* Projects */
+
+.buttons {
+    margin-bottom: 25px;
 }
 
-.filter-buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.filter-button {
+.filter {
+    padding: 8px 15px;
+    margin-right: 5px;
     background-color: white;
-    border: 2px solid #2f6da8;
-    color: #174f80;
-    padding: 9px 15px;
+    border: 1px solid #3c79aa;
     border-radius: 5px;
+    color: #17517f;
     cursor: pointer;
-    font-weight: bold;
 }
 
-.filter-button:hover,
-.active-filter {
-    background-color: #2f6da8;
+.filter:hover,
+.current-filter {
+    background-color: #3c79aa;
     color: white;
 }
 
-.project-grid {
+.projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-.project-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-}
-
-.project-image {
-    height: 220px;
-    overflow: hidden;
-    background-color: #dfe7ef;
-}
-
-.project-image img {
+.project img {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
-.project-placeholder {
+.project-image {
+    height: 200px;
+    background-color: #dce5ed;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #4f647b;
-    font-size: 20px;
+    justify-content: center;
+    color: #536779;
     font-weight: bold;
 }
 
-.project-content {
-    padding: 30px;
-}
 
-.project-type {
-    color: #2f6da8;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
+/* Footer */
 
-.project-content h3 {
-    color: #172f4d;
-    font-size: 25px;
-}
-
-.technology-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin: 20px 0;
-}
-
-.technology-tags span {
-    background-color: #e8f0f8;
-    color: #244b73;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 13px;
-}
-
-.project-role {
-    color: #4d5d70;
-}
-
-.project-button {
-    display: inline-block;
-    background-color: #2f6da8;
-    color: white !important;
-    padding: 10px 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 5px;
-}
-
-.project-button:hover {
-    background-color: #3d82c2;
-}
-
-
-/* =========================
-   PROJECT NOTE
-   ========================= */
-
-.project-note {
-    background-color: white;
-    margin: 0 40px 50px 40px;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
-}
-
-.project-note h2 {
-    color: #172f4d;
-}
-
-.project-note p:not(.small-heading) {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* =========================
-   FOOTER
-   ========================= */
-
-.site-footer {
-    background-color: #0d1b2e;
+footer {
+    background-color: #102236;
     color: white;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-.footer-content {
-    max-width: 1150px;
+.footer {
+    max-width: 1100px;
     margin: auto;
-    padding: 50px 40px;
+    padding: 40px 35px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 50px;
+    gap: 30px;
 }
 
-.footer-content h2 {
-    margin-top: 0;
-}
-
-.footer-content h3 {
-    color: #8fc5f2;
-    font-size: 15px;
-    letter-spacing: 1px;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.footer-links a {
-    color: #dce8f5;
-    text-decoration: none;
-}
-
-.footer-links a:visited {
-    color: #c9d9ec;
-}
-
-.footer-links a:hover {
+.footer h2 {
     color: white;
+}
+
+.footer h3 {
+    color: #a9d2ef;
+}
+
+.footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer a:visited {
+    color: #d9e8f5;
+}
+
+.footer a:hover {
     text-decoration: underline;
 }
 
-.footer-bottom {
-    border-top: 1px solid #31445b;
+.bottom {
+    border-top: 1px solid #35495c;
     text-align: center;
-    padding: 20px;
-    color: #b8c5d4;
+    padding: 15px;
+    margin: 0;
+    color: #c4d0da;
 }
 
 
-/* =========================
-   RESPONSIVE DESIGN
-   ========================= */
+/* Smaller screens */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
-    .header-content {
+    .top {
         flex-direction: column;
         gap: 15px;
     }
-
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 50px 25px;
-    }
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .quick-links {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .filter-area {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .resume-card-heading {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-}
-
-
-@media (max-width: 600px) {
 
     nav {
         flex-direction: column;
@@ -661,52 +304,26 @@ main {
         text-align: center;
     }
 
-    nav a {
-        width: 100%;
+    .banner {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 25px;
     }
 
-    .hero-image img {
-        width: 200px;
-        height: 200px;
+    .banner h2 {
+        font-size: 34px;
     }
 
-    .page-banner {
-        padding: 45px 25px;
-    }
-
-    .page-banner h1 {
-        font-size: 38px;
-    }
-
-    .intro-section,
-    .quick-links,
-    .resume-section,
-    .projects-section {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .intro-section {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 30px;
-    }
-
-    .quick-links {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .project-note {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .filter-buttons {
-        flex-wrap: wrap;
-    }
-
-    .skill-list {
+    .cards,
+    .projects {
         grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        margin: 20px;
     }
 }

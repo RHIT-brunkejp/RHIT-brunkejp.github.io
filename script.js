@@ -1,36 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
+let buttons = document.querySelectorAll(".filter");
+let projects = document.querySelectorAll(".project");
 
-    let buttons = document.querySelectorAll(".filter-button");
-    let projects = document.querySelectorAll(".project-card");
+for (let i = 0; i < buttons.length; i++) {
 
-    for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
 
-        buttons[i].addEventListener("click", function() {
+        let type = buttons[i].getAttribute("data-type");
 
-            let selectedCategory = buttons[i].getAttribute("data-filter");
+        for (let j = 0; j < buttons.length; j++) {
+            buttons[j].classList.remove("current-filter");
+        }
 
-            for (let j = 0; j < buttons.length; j++) {
-                buttons[j].classList.remove("active-filter");
+        buttons[i].classList.add("current-filter");
+
+        for (let j = 0; j < projects.length; j++) {
+
+            let projectType =
+                projects[j].getAttribute("data-type");
+
+            if (type == "all" || type == projectType) {
+                projects[j].style.display = "block";
             }
-
-            buttons[i].classList.add("active-filter");
-
-            for (let j = 0; j < projects.length; j++) {
-
-                let projectCategory =
-                    projects[j].getAttribute("data-category");
-
-                if (selectedCategory == "all" ||
-                    selectedCategory == projectCategory) {
-
-                    projects[j].style.display = "block";
-
-                } else {
-
-                    projects[j].style.display = "none";
-
-                }
+            else {
+                projects[j].style.display = "none";
             }
-        });
-    }
-});
+        }
+    });
+}
