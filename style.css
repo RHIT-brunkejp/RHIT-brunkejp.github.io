@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #222222;
+    background-color: #800000;
     padding: 15px;
 }
 
@@ -62,15 +62,15 @@ img {
 }
 
 a {
-    color: #0645ad;
+    color: white;
 }
 
 a:visited {
-    color: #5a2ca0;
+    color: white;
 }
 
 footer {
-    background-color: #222222;
+    background-color: #800000;
     color: white;
     text-align: center;
     padding: 20px;
