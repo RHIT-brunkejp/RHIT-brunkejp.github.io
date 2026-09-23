@@ -19,6 +19,7 @@ document.getElementById("bottom").innerHTML = `
     <p>
         <a href="https://github.com/RHIT-brunkejp">GitHub</a>
         <a href="https://www.linkedin.com/in/jjbrunke">LinkedIn</a>
+        &copy; 2026 Joshua Brunke
     </p>
 `;
 
